@@ -1,6 +1,10 @@
 import { z } from "zod";
 import { ValueOf } from "../shared";
 import { CACHE_PLUGIN, CACHE_PLUGIN_NAME } from "./cache";
+import {
+  CONSTELLATION_PLUGIN,
+  CONSTELLATION_PLUGIN_NAME,
+} from "./constellation";
 import { CORE_PLUGIN, CORE_PLUGIN_NAME } from "./core";
 import { D1_PLUGIN, D1_PLUGIN_NAME } from "./d1";
 import { DURABLE_OBJECTS_PLUGIN, DURABLE_OBJECTS_PLUGIN_NAME } from "./do";
@@ -16,6 +20,7 @@ export const PLUGINS = {
   [KV_PLUGIN_NAME]: KV_PLUGIN,
   [QUEUES_PLUGIN_NAME]: QUEUES_PLUGIN,
   [R2_PLUGIN_NAME]: R2_PLUGIN,
+  [CONSTELLATION_PLUGIN_NAME]: CONSTELLATION_PLUGIN,
 };
 export type Plugins = typeof PLUGINS;
 

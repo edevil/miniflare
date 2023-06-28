@@ -5,6 +5,7 @@ import { ConstellationGateway, ConstellationQuerySchema } from "./gateway";
 export class ConstellationRouter extends Router<ConstellationGateway> {
   @POST("/run")
   query: RouteHandler = async (req) => {
+    console.log("ANDRE in query route handler");
     const persist = decodePersist(req.headers);
     const gateway = this.gatewayFactory.get("TODO", persist);
     const query = ConstellationQuerySchema.parse(await req.json());
